@@ -1,0 +1,60 @@
+﻿<Window x:Class="CallSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="800" Loaded="Window_Loaded" WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="0,0,2,0" BorderBrush="#6495ED">
+            <Grid Grid.Row="0" Grid.Column="0" Background="#A52A2A">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="0" Name="btnTxt" Height="28" Width="20" Click="btnTxt_Click" Style="{ StaticResource ChangeMouse}" ></Button>
+                <Grid Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center">
+                    <TextBlock Name="TbxLeftFont" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" FontSize="150" Height="200" Foreground="#F5F5F5" >
+                       </TextBlock>
+                </Grid>
+                <Grid Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center"  HorizontalAlignment="Center">
+                    <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Name="LNumber" FontSize="150" Foreground="#F5F5F5" >
+                     </TextBlock>
+                </Grid>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="0" Grid.Column="1" Background="#4A708B">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center">
+                <TextBlock Name="TbxRightFont" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" FontSize="150"  Height="200" Foreground="#F5F5F5" >
+                     </TextBlock>
+            </Grid>
+            <Grid Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Center">
+                <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Name="RNumber" FontSize="150"  Margin="0,0,10,0" Foreground="#F5F5F5"></TextBlock>
+            </Grid>
+        </Grid>
+        <Grid Name="GridMsg" Grid.Row="1" Grid.ColumnSpan="2" Visibility="Collapsed">
+            <RichTextBox Name="txtMsg"  FontSize="20" TextChanged="txtMsg_TextChanged"></RichTextBox>
+        </Grid>
+        <Grid Name="Gridone" Grid.Row="1" Grid.Column="0" Background="#A52A2A">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="52*"/>
+                <ColumnDefinition Width="47*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="0,0,2,0" BorderBrush="#6495ED" Grid.ColumnSpan="2"></Border>
+        </Grid>
+        <Grid Name="GridTwo" Grid.Row="1" Grid.Column="1" Background="#4A708B"></Grid>
+    </Grid>
+</Window>
